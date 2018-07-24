@@ -25,7 +25,7 @@ read -p 'Server ip: ' SERVER_IP
 USER="admin"
 
 source /root/.digitalocean_password
-MYSQL_ROOT_PASSWORD = $root_mysql_pass
+MYSQL_ROOT_PASSWORD=$root_mysql_pass
 
 apt-get update && apt-get upgrade -y && apt-get autoremove -y
 
