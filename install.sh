@@ -196,7 +196,7 @@ sed -i "s/#BEANSTALKD_EXTRA=\"-b /var/lib/beanstalkd\"/BEANSTALKD_EXTRA=\"-z 524
 
 # cerbot
 sudo apt-get install -y python-certbot-nginx
-certbot --nginx -d $SERVER_NAME -d www.$SERVER_NAME --email monitor@pixwell.sk
+certbot --nginx -d $SERVER_NAME -d www.$SERVER_NAME --email monitor@pixwell.sk --agree-tos --no-eff-email
 
 #cat >> /etc/nginx/sites-available/$SERVER_NAME << EOF
 
