@@ -137,6 +137,9 @@ sudo apt-get install software-properties-common -y
 for f in ppa:ondrej/php ppa:certbot/certbot; do apt-add-repository $f -y; done && apt-get update
 
 
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password $MYSQL_ROOT_PASSWORD'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD'
+
 apt-get install mysql-server -y
 read -p 'DB name: ' databaseName
 
