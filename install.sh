@@ -77,11 +77,6 @@ apt-get install nginx -y
 
 for f in 's/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 64;/' 's/worker_processes.*/worker_processes auto;/' 's/# multi_accept.*/multi_accept on;/' 's/# server_tokens.*/server_tokens off;/'; do sed -i "$f" /etc/nginx/nginx.conf; done
 
-
-# Generate dhparam File
-
-openssl dhparam -out /etc/nginx/dhparams.pem 2048
-
 # Disable The Default Nginx Site
 
 rm /etc/nginx/sites-enabled/default
