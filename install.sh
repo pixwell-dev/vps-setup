@@ -27,6 +27,15 @@ USER="admin"
 source /root/.digitalocean_password
 MYSQL_ROOT_PASSWORD=$root_mysql_pass
 
+# fix locale
+sudo locale-gen en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+sudo update-locale
+echo "LANGUAGE=en_US.UTF-8" >> /etc/default/locale
+echo "LC_ALL=en_US.UTF-8" >> /etc/default/locale
+
+
 apt-get update && apt-get upgrade -y && apt-get autoremove -y
 
 # Disable Password Authentication Over SSH
