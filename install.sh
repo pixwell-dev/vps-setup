@@ -155,7 +155,7 @@ mysql --user="root" --password="$MYSQL_ROOT_PASSWORD" -e "FLUSH PRIVILEGES;"
 mysql --user="$USER" --password="$MYSQL_ROOT_PASSWORD" -e "CREATE DATABASE $databaseName CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
 
-apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-sqlite3 php7.2-intl php7.2-mbstring php7.2-gd php7.2-zip php7.2-json php7.2-curl php7.2-xml -y
+apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-sqlite3 php7.2-intl php7.2-mbstring php7.2-gd php7.2-zip php7.2-json php7.2-curl php7.2-xml php7.2-gmp -y
 
 
 # Command will change configuration in /etc/php/7.1/fpm/php.ini file.
