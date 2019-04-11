@@ -226,7 +226,7 @@ touch /etc/supervisor/conf.d/laravel-worker.conf
 cat > /etc/supervisor/conf.d/laravel-worker.conf << EOF
 [program:laravel-queue-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=sudo php /var/www/$SERVER_NAME/artisan queue:work --tries=3 --queue=default
+command=sudo -u www-data php /var/www/$SERVER_NAME/artisan queue:work --tries=3 --queue=default
 user=root
 autostart=true
 autorestart=true
